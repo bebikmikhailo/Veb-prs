@@ -1,0 +1,113 @@
+:root {
+    --green-100: #e8f5e9;
+    --green-150: #ebffec;
+    --green-200: #c8e6c9;
+    --green-300: #a5d6a7;
+    --green-400: #81c784;
+    --green-500: #4caf50;
+    --green-600: #43a047;
+    --green-700: #2e7d32;
+    --green-800: #1b5e20;
+    --green-900: #144217;
+    --green-1000: #0d2a0f;
+
+    --body-bg: var(--green-100);
+    --card-bg: #ffffff;
+    --navbar-bg: var(--green-400);
+}
+
+/* general */
+body {
+    font-family: "Roboto";
+    background-color: var(--body-bg)
+}
+
+
+@media (max-width: 575.98px) {
+    .header,
+    .main-sections
+    {
+        max-width: 95%;
+    }
+}
+
+.main-sections {
+    border-radius: 1rem;
+    background-color: var(--green-150);
+}
+
+#about, #parameters, #scheme, #contacts {
+    scroll-margin-top: 90px;
+}
+
+
+
+/* navbar */
+.navbar {
+    background-color: var(--navbar-bg);
+}
+
+
+/* header */
+
+.hero-section {
+    margin-top: 6rem;
+}
+
+.header {
+
+    background-color: var(--navbar-bg);
+    border-radius: 1rem;
+    text-align: center;
+    color: white;
+    padding: 3rem 3rem;
+
+}
+
+/* main */
+
+/* about section */
+@media (min-width: 992px) {
+    .fs-l {
+        font-size: 0.95rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .fs-xl {
+        font-size: 1.12rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .fs-xll {
+        font-size: 1.3rem;
+    }
+}
+
+
+/* parameters section */
+
+
+
+/* scheme section */
+.scheme-img {
+    max-height: 700px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* footer */
+
+/* cards */
+
+
+
+.card-header {
+    background-color: var(--green-200);
+}
+
+.card-body {
+    background-color: var(--green-100);
+}
