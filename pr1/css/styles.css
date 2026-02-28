@@ -2,17 +2,9 @@
     --green-100: #e8f5e9;
     --green-150: #ebffec;
     --green-200: #c8e6c9;
-    --green-300: #a5d6a7;
     --green-400: #81c784;
-    --green-500: #4caf50;
-    --green-600: #43a047;
-    --green-700: #2e7d32;
-    --green-800: #1b5e20;
-    --green-900: #144217;
-    --green-1000: #0d2a0f;
 
     --body-bg: var(--green-100);
-    --card-bg: #ffffff;
     --navbar-bg: var(--green-400);
 }
 
@@ -40,6 +32,20 @@ body {
     scroll-margin-top: 90px;
 }
 
+/* animation */
+
+@keyframes img-scale {
+    from {
+        transform: translate(0);
+        transform: scale(1);
+    }
+    to {
+        transform: translate(0.025rem);
+        transform: scale(1.025);
+    }
+}
+
+
 
 
 /* navbar */
@@ -48,6 +54,10 @@ body {
 }
 
 
+.navbar-nav .nav-link:hover {
+    color: rgb(82, 82, 82) !important;
+}
+
 /* header */
 
 .hero-section {
@@ -55,39 +65,42 @@ body {
 }
 
 .header {
-
     background-color: var(--navbar-bg);
     border-radius: 1rem;
     text-align: center;
     color: white;
     padding: 3rem 3rem;
-
 }
 
 /* main */
 
 /* about section */
+
+#about img:hover {
+    animation: img-scale 1s forwards;
+}
+
 @media (min-width: 992px) {
-    .fs-l {
-        font-size: 0.95rem;
+    .img-l {
+        margin: 0 auto;
+        height: 550px;
     }
 }
 
+
 @media (min-width: 1200px) {
-    .fs-xl {
-        font-size: 1.12rem;
+    .img-xl {
+        margin: 0 auto;
+        height: 460px;
     }
 }
 
 @media (min-width: 1400px) {
-    .fs-xll {
-        font-size: 1.3rem;
+    .img-xxl {
+        margin: 0 auto;
+        height: 415px;
     }
 }
-
-
-/* parameters section */
-
 
 
 /* scheme section */
@@ -97,12 +110,14 @@ body {
     margin: 0 auto;
 }
 
+.scheme-img:active {
+    transform: scale(1.125);
+}
+
 
 /* footer */
 
 /* cards */
-
-
 
 .card-header {
     background-color: var(--green-200);
@@ -110,4 +125,21 @@ body {
 
 .card-body {
     background-color: var(--green-100);
+}
+
+.card-link {
+    color: rgb(0, 0, 0);
+    text-decoration-line: none;
+}
+
+.card-link:hover {
+    color: rgb(0, 0, 0) !important;
+}
+
+.card-link span {
+    transition: color 0.05s;
+}
+
+.card-link span:hover {
+    color: rgb(42, 56, 255);
 }

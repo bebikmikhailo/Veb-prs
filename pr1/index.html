@@ -7,7 +7,7 @@
 
   	<!-- Bootstrap CSS -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- Мої стилі -->
+    <!-- Roboto and Montserrat fonts -->
     <link rel="stylesheet" href="css/styles.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,7 @@
 		<div class="container">
 			<a class="navbar-brand d-flex justify-content-center" href="#">
 				<img src="images/75455-700x500.png" alt="" width="50" height="34" class="d-inline-block">
-				<spans class="mx-1 my-2">Підстанція 110/35/10 кВ</span>
+				<spans class="mx-1 my-2 fw-bold">Підстанція 110/35/10 кВ</span>
 			</a>
 
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,7 +51,7 @@
 	<header class="hero-section">
 		<div class="header container shadow">
 			<h1>Трансформаторна підстанція 110/35/10 кВ</h1>
-			<p>Забезпечення постійного електропостачання міста Києва</p>
+			<p class="lead">Забезпечення постійного електропостачання міста Києва</p>
 		</div>
 	</header>
 
@@ -64,13 +64,13 @@
 			<div class="container main-sections py-3 px-3 shadow-sm">
 				<h2>Про об'єкт</h2>
 				<hr>
-				<div class="row justify-content-center">
+				<div class="row justify-content-center align-items-center">
 					<div class="col-lg-6">
-						<p class="fs-l fs-xl fs-xll">Трансформаторна підстанція 110/35/10 кВ, розташована у місті Києві на вулиці Енергетичній, 15, є стратегічно важливим елементом енергосистеми столиці. Об'єкт введений в експлуатацію у 2015 році та призначений для приймання електроенергії з мережі 110 кВ, її подальшої трансформації на рівні напруги 35 кВ та 10 кВ і стабільного розподілу між промисловими підприємствами та житловими секторами міста. Завдяки вигідному розташуванню та високій пропускній здатності, підстанція забезпечує надійне енергопостачання критичної інфраструктури та підтримує енергетичну стійкість району.</p>
-						<p class="fs-l fs-xl fs-xll">Технічну основу об’єкта складають три силові трансформатори загальною потужністю 63 МВА, які оснащені системами автоматичного регулювання напруги під навантаженням. Підстанція обладнана сучасними мікропроцесорними засобами захисту, автоматики та телемеханіки, що дозволяють здійснювати дистанційний моніторинг і керування обладнанням у режимі реального часу. Використання передових технологій гарантує безперебійну роботу енерговузла, високий рівень пожежної безпеки та мінімальний час реакції на будь-які відхилення у параметрах електромережі.</p>
+						<p>Трансформаторна підстанція 110/35/10 кВ, розташована у місті Києві на вулиці Енергетичній, 15, є стратегічно важливим елементом енергосистеми столиці. Об'єкт введений в експлуатацію у 2015 році та призначений для приймання електроенергії з мережі 110 кВ, її подальшої трансформації на рівні напруги 35 кВ та 10 кВ і стабільного розподілу між промисловими підприємствами та житловими секторами міста. Завдяки вигідному розташуванню та високій пропускній здатності, підстанція забезпечує надійне енергопостачання критичної інфраструктури та підтримує енергетичну стійкість району.</p>
+						<p>Технічну основу об’єкта складають три силові трансформатори загальною потужністю 63 МВА, які оснащені системами автоматичного регулювання напруги під навантаженням. Підстанція обладнана сучасними мікропроцесорними засобами захисту, автоматики та телемеханіки, що дозволяють здійснювати дистанційний моніторинг і керування обладнанням у режимі реального часу. Використання передових технологій гарантує безперебійну роботу енерговузла, високий рівень пожежної безпеки та мінімальний час реакції на будь-які відхилення у параметрах електромережі.</p>
 					</div>
 					<div class="col-lg-6">
-						<img src="images/KTP-2.jpg" alt="" class="img-fluid rounded">	
+						<img src="images/KTP-2.jpg" alt="Фото підстанції 110/35/10 кВ" class="d-block img-fluid rounded img-l img-xl img-xxl">	
 					</div>
 				</div>
 			</div>
@@ -155,7 +155,7 @@
 			<div class="container main-sections py-3 px-3 shadow-sm">
 				<h2>Однолінійна схема</h2>
 				<hr>
-				<img src="images/497045-vms-shema1-scaled.jpg" alt="" class="scheme-img img-fluid">	
+				<img src="images/497045-vms-shema1-scaled.jpg" alt="Схема підстанції 110/35/10 кВ" class="scheme-img img-fluid rounded">	
 			</div>
 		</section>
 
@@ -173,42 +173,66 @@
 						<div class="card-header fw-bold">ПС «Енергетична»</div>
 						<div class="card-body">
 							<div class="card-text">Адреса: Україна, м. Київ, вул. Енергетична, 15</div>
-							<a href="tel:+38 044 123 45 67" class="card-link d-block">Телефон: +38 044 123 45 67</a>
-							<a href="mailto:kyiv.ps110@energy.com.ua" class="card-link d-block ms-0">Email: kyiv.ps110@energy.com.ua</a>
-							<a href="https://www.kyivenergo.ua" class="card-link d-block ms-0">Веб-сайт: kyivenergo.ua</a>
+							<a href="tel:+38 044 123 45 67" class="card-link d-block">
+								Телефон: <span>+38 044 123 45 67</span>
+							</a>
+							<a href="mailto:kyiv.ps110@energy.com.ua" class="card-link d-block ms-0">
+								Email: <span>kyiv.ps110@energy.com.ua</span>
+							</a>
+							<a href="https://www.kyivenergo.ua" class="card-link d-block ms-0">
+								Веб-сайт: <span>kyivenergo.ua</span>
+							</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-6 my-3">
 					<div class="card border-0">
-						<div class="card-header fw-bold">ПС «Енергетична»</div>
+						<div class="card-header fw-bold">Відділ технічного нагляду</div>
 						<div class="card-body">
-							<div class="card-text">Адреса: Україна, м. Київ, вул. Енергетична, 15</div>
-							<a href="tel:+38 044 123 45 67" class="card-link d-block">Телефон: +38 044 123 45 67</a>
-							<a href="mailto:kyiv.ps110@energy.com.ua" class="card-link d-block ms-0">Email: kyiv.ps110@energy.com.ua</a>
-							<a href="https://www.kyivenergo.ua" class="card-link d-block ms-0">Веб-сайт: kyivenergo.ua</a>
+							<div class="card-text">Адреса: м. Київ, вул. Енергетична, 15 (АПК)</div>
+							<a href="tel:+38 044 239 45 12" class="card-link d-block">
+								Телефон: <span>+38 044 239 45 12</span>
+							</a>
+							<a href="mailto:tech.control@energy.kyiv.ua" class="card-link d-block ms-0">
+								Email: <span>tech.control@energy.kyiv.ua</span>
+							</a>
+							<a href="https://www.monitoring.energy.gov.ua" class="card-link d-block ms-0">
+								Веб-сайт: <span>monitoring.energy.gov.ua</span>
+							</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-6 my-3">
 					<div class="card border-0">
-						<div class="card-header fw-bold">ПС «Енергетична»</div>
+						<div class="card-header fw-bold">Служба енергозбуту</div>
 						<div class="card-body">
-							<div class="card-text">Адреса: Україна, м. Київ, вул. Енергетична, 15</div>
-							<a href="tel:+38 044 123 45 67" class="card-link d-block">Телефон: +38 044 123 45 67</a>
-							<a href="mailto:kyiv.ps110@energy.com.ua" class="card-link d-block ms-0">Email: kyiv.ps110@energy.com.ua</a>
-							<a href="https://www.kyivenergo.ua" class="card-link d-block ms-0">Веб-сайт: kyivenergo.ua</a>
+							<div class="card-text">Адреса: м. Київ, вул. Юрія Іллєнка, 31</div>
+							<a href="tel:+38 044 581 06 20" class="card-link d-block">
+								Телефон: <span>+38 044 581 06 20</span>
+							</a>
+							<a href="mailto:client.service@ezu.com.ua" class="card-link d-block ms-0">
+								Email: <span>client.service@ezu.com.ua</span>
+							</a>
+							<a href="https://www.yasno.com.ua" class="card-link d-block ms-0">
+								Веб-сайт: <span>yasno.com.ua</span>
+							</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-6 my-3">
 					<div class="card border-0">
-						<div class="card-header fw-bold">ПС «Енергетична»</div>
+						<div class="card-header fw-bold">Служба підстанцій</div>
 						<div class="card-body">
-							<div class="card-text">Адреса: Україна, м. Київ, вул. Енергетична, 15</div>
-							<a href="tel:+38 044 123 45 67" class="card-link d-block">Телефон: +38 044 123 45 67</a>
-							<a href="mailto:kyiv.ps110@energy.com.ua" class="card-link d-block ms-0">Email: kyiv.ps110@energy.com.ua</a>
-							<a href="https://www.kyivenergo.ua" class="card-link d-block ms-0">Веб-сайт: kyivenergo.ua</a>
+							<div class="card-text">Адреса: Україна, м. Київ, вул. Маршала Гречка, 13</div>
+							<a href="tel:+38 067 111 22 33" class="card-link d-block">
+								Телефон: <span>+38 067 111 22 33</span>
+							</a>
+							<a href="mailto:office.substations@kyiv.ua" class="card-link d-block ms-0">
+								Email: <span>office.substations@kyiv.ua</span>
+							</a>
+							<a href="https://www.substation.control" class="card-link d-block ms-0">
+								Веб-сайт: <span>substation.control</span>
+							</a>
 						</div>
 					</div>
 				</div>
