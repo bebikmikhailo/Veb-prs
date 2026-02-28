@@ -32,6 +32,12 @@ body {
     scroll-margin-top: 90px;
 }
 
+@media (max-width: 402px) {
+    .navbar-title {
+        display: none;
+    }
+}
+
 /* animation */
 
 @keyframes img-scale {
@@ -72,6 +78,10 @@ body {
     padding: 3rem 3rem;
 }
 
+.header h1 {
+    overflow-wrap: break-word;
+}
+
 /* main */
 
 /* about section */
@@ -100,6 +110,12 @@ body {
         margin: 0 auto;
         height: 415px;
     }
+}
+
+/* parameters section */
+
+#parameters table {
+    word-break: break-word;
 }
 
 
