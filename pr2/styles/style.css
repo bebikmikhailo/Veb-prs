@@ -1,0 +1,87 @@
+* {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+
+body {
+  min-height: 100vh;
+  padding: 20px 20px;
+  background: linear-gradient(140deg,rgba(255, 175, 77, 1) 0%, rgba(255, 66, 66, 1) 100%);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.light-container {
+  background-color: white;
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 20px;
+}
+
+
+
+.controls {
+  display: flex;
+  margin-top: 20px;
+  padding: 15px 20px;
+}
+
+.update-button,
+.auto-update-button {
+  border: none;
+  font-size: 1.25rem;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.update-button {
+  background-color: hsl(31, 100%, 53%);
+  margin-right: 5px;
+}
+
+.auto-update-button {
+  background-color: hsl(6, 100%, 58%);
+
+}
+
+
+.parameters {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+}
+
+.parameters-container {
+  height: 200px;
+}
+
+.parameters-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;;
+}
+
+
+.parameters-value {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.parameters-units {
+  font-size: 1.25rem;
+}
+
+.parameters-visual-status {
+  margin-top: 25px;
+  height: 15px;
+  width: 15px;
+  border-radius: 10px;
+  background-color: rgb(0, 147, 0);
+}
