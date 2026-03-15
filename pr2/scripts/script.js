@@ -1,11 +1,10 @@
 import { generateRandomNumber } from "./utils.js";
 import "./theme.js";
 import "./clock.js";
+import "./chart.js";
+import { addDataToChart, updateChart } from "./chart.js";
 
-
-console.log(new Date().getHours());
-
-const parametersValues = JSON.parse(localStorage.getItem('parametersValues')) || [
+export const parametersValues = JSON.parse(localStorage.getItem('parametersValues')) || [
   {
     value: generateRandomNumber(400, 1000),
     min: 400,
@@ -66,6 +65,8 @@ function updateParamContainer() {
   saveParamValuesToStorage();
   renderParametersStatus();
   updateLastUpdatesTime();
+
+  updateChart();
 }
 
 updateParamContainer();
@@ -97,7 +98,7 @@ autoUpdateButton.addEventListener("click", () => {
   intervalId = setInterval(() => {
     generateParametersValues();
     updateParamContainer();
-  }, 500)
+  }, 1000)
 })
 
 
@@ -157,5 +158,23 @@ function updateLastUpdatesTime() {
   document.querySelector('.last-update-time').innerHTML = str;
 }
 
+function getCurrentEnergy() {
+  return parametersValues[1].value;
+}
 
+let totalEnergy = Number(localStorage.getItem('totalEnergy')) || 0;
 
+function updateTotalEnergyProduced() {
+  const energyCounter = document.querySelector('.js-total-energy-produced');
+  const currentEnergy = getCurrentEnergy();
+  totalEnergy += currentEnergy / 3600;
+
+  energyCounter.innerText = totalEnergy.toFixed(2);
+  localStorage.setItem('totalEnergy', String(totalEnergy));
+}
+
+updateTotalEnergyProduced();
+
+setInterval(() => {
+  updateTotalEnergyProduced();
+}, 1000);

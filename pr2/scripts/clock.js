@@ -5,7 +5,6 @@ const updateClock = () => {
   clock.innerHTML = now.toLocaleTimeString();
 
   const hours = now.getHours();
-  console.log(hours);
 
   if ((hours >= 23 && hours < 24) || (hours >= 0 && hours < 6) ) {
     document.querySelector('.js-time-image').src = "./images/clock-moon-image.png";

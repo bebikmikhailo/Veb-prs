@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Сонячна електростанція - Моніторинг</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="./styles/media-queries.css">
 </head>
 <body>
+
 
   <!-- to prevent light theme blink before dark applied when page realoding -->
   <script>
@@ -23,127 +24,124 @@
   <div class="container">
     <header>
       <div class="small-container">
-        <div class="test">
+        <div class="heading-and-time">
           <h1>Сонячна електростанція</h1>
-          <span class="last-update-time"></span>
+          <span class="last-update-time" aria-live="polite"></span>
         </div>
       </div>
     </header>
     <main>
 
-      <div class="small-container controls">
+      <section class="small-container controls" aria-label="Панель керування">
         <div class="controls-left-side">
-          <button class="update-button shadow-sm js-update-button">
-            <img src="./images/light-refresh.png" alt="refresh image" class="update-button-image">
+          <button class="update-button shadow-sm js-update-button" aria-label="Оновити дані">
+            <img src="./images/light-refresh.png" alt="refresh image" role="presentation" aria-hidden="true" class="update-button-image">
             <span>Оновити</span>
           </button>
-          <button class="auto-update-button shadow-sm js-auto-update-button">
-            <img src="./images/light-auto-refresh.png" alt="auto reload image" class="auto-update-button-image">
+          <button class="auto-update-button shadow-sm js-auto-update-button" aria-pressed="false">
+            <img src="./images/light-auto-refresh.png" alt="auto reload image" role="presentation" aria-hidden="true" class="auto-update-button-image">
             <span>Автооновлення</span>
           </button>
         </div>
 
         <div class="controls-right-side">
-          <img src="./images/grey-moon-icon.png" alt="moon icon" class="moon-icon-image">
-          <div clas="checkbox-container">
-            <input type="checkbox" class="theme-checkbox">
-            <div class="checkbox-circle"></div>
+          <img src="./images/grey-moon-icon.png" alt="moon icon" role="presentation" aria-hidden="true" class="moon-icon-image">
+          <div class="checkbox-container">
+            <input type="checkbox" class="theme-checkbox" aria-label="Перемикач темної теми">
+            <div class="checkbox-circle" aria-hidden="true"></div>
           </div>
         </div>
+      </section>
+
+      <div class="small-container clock-container" role="timer" aria-label="Поточний час">
+        <img src="./images/clock-sun-image.png" alt="Daytime image" class="js-time-image">
+        <div class="clock" aria-live="off"></div>
       </div>
 
-      <div class="small-container clock-container">
-        <img src="./images/clock-sun-image.png" alt="sun image" class="js-time-image">
-        <div class="clock"></div>
-      </div>
 
-
-      <div class="parameters">
-        <div class="small-container parameters-container">
+      <ul class="parameters">
+        <li class="small-container parameters-container">
           <h3>Сонячна радіація</h3>
 
           <div class="parameters-info">
-            <div>
+            <div aria-live="polite">
               <span class="parameters-value js-parameters-value">475</span>  
               <span class="parameters-units">Вт/м2</span>
             </div>
-            <div class="parameters-visual-status"></div>
+            <div class="parameters-visual-status" role="presentation"></div>
           </div>
 
-        </div>
-        <div class="small-container parameters-container">
+        </li>
+        <li class="small-container parameters-container">
           <h3>Вироблена потужність</h3>
     
 
           <div class="parameters-info">
-            <div>
+            <div aria-live="polite">
               <span class="parameters-value js-parameters-value">475</span>  
               <span class="parameters-units">кВт</span>
             </div>
-            <div class="parameters-visual-status"></div>
+            <div class="parameters-visual-status" role="presentation"></div>
           </div>
 
-        </div>
-        <div class="small-container parameters-container">
+        </li>
+        <li class="small-container parameters-container">
           <h3>Напруга DC</h3>
 
           <div class="parameters-info">
-            <div>
+            <div aria-live="polite">
               <span class="parameters-value js-parameters-value">475</span>  
               <span class="parameters-units">В</span>
             </div>
-            <div class="parameters-visual-status"></div>
+            <div class="parameters-visual-status" role="presentation"></div>
           </div>
 
-        </div>
-        <div class="small-container parameters-container">
+        </li>
+        <li class="small-container parameters-container">
           <h3>Температура панелей</h3>
           
           <div class="parameters-info">
-            <div>
+            <div aria-live="polite">
               <span class="parameters-value js-parameters-value">475</span>  
               <span class="parameters-units">°C</span>
             </div>
-            <div class="parameters-visual-status"></div>
+            <div class="parameters-visual-status" role="presentation"></div>
           </div>
 
-        </div>
-        <div class="small-container parameters-container">
+        </li>
+        <li class="small-container parameters-container">
           <h3>Ефективність</h3>
           <div class="parameters-info">
-            <div>
+            <div aria-live="polite">
               <span class="parameters-value js-parameters-value">475</span>  
               <span class="parameters-units">%</span>
             </div>
-            <div class="parameters-visual-status"></div>
+            <div class="parameters-visual-status" role="presentation"></div>
           </div>
-        </div>
+        </li>
 
-        <div class="small-container parameters-container">
+        <li class="small-container parameters-container">
           <h3>Вироблено за сьогодні</h3>
           <div class="parameters-info">
-            <div>
-              <span class="parameters-value">475</span>  
+            <div aria-live="polite">
+              <span class="parameters-value js-total-energy-produced">0.00</span>  
               <span class="parameters-units">кВт/год</span>
             </div>
           </div>
-        </div>
+        </li>
+      </ul>
 
-
-      </div>
-
+      <section class="small-container chart-container" role="region" aria-label="Графік вихідної потужності">
+          <h3>Вихідна потужність</h3>
+          <div class="chart-wrapper">
+            <canvas class="js-chart" role="img" aria-label="Лінійний графік вихідної потужності в часі"></canvas>  
+          </div>
+      </section>
 
     </main>
   </div>
 
-
-
-
-
-
-
-
-
   <script type="module" src="./scripts/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>
