@@ -1,0 +1,55 @@
+@media(max-width: 660px) {
+  .controls button span{
+    display: none;
+  }
+
+  .controls button img {
+    margin: 0; 
+  }
+}
+
+@media(max-width: 490px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .parameters-value {
+    font-size: 40px;
+  }
+
+  header .test {
+    margin-inline: 16px;
+  }
+}
+
+@media (max-width: 440px) {
+  .controls {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .controls-left-side {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .update-button, 
+  .auto-update-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .controls-right-side {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .parameters {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}

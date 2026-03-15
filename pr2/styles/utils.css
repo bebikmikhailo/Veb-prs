@@ -2,3 +2,34 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.theme-checkbox {
+  position: relative;
+  height: 33px;
+  width: 66px;
+  appearance: none;
+  background-color: rgb(226, 226, 226);
+  cursor: pointer;
+  border-radius: 22px;
+}
+
+.theme-checkbox:checked {
+  background-color: var(--checkbox-bg)
+}
+
+
+.theme-checkbox::before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  width: 33px;
+  height: 33px;
+  background-color: var(--checkbox-slider-bg);
+  border-radius: 100%;
+  transition: .2s;
+}
+
+
+.theme-checkbox:checked::before {
+  left: 33px;
+}
+

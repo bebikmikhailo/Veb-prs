@@ -9,84 +9,130 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="stylesheet" href="./styles/utils.css">
+  <link rel="stylesheet" href="./styles/media-queries.css">
 </head>
 <body>
-  
+
+  <!-- to prevent light theme blink before dark applied when page realoding -->
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-theme');
+    }
+  </script>
 
   <div class="container">
     <header>
-      <div class="light-container">
-        <h1>Сонячна електростанція</h1>
+      <div class="small-container">
+        <div class="test">
+          <h1>Сонячна електростанція</h1>
+          <span class="last-update-time"></span>
+        </div>
       </div>
     </header>
     <main>
-      <div class="light-container controls">
+
+      <div class="small-container controls">
         <div class="controls-left-side">
-          <button class="update-button shadow-sm">Оновити</button>
-          <button class="auto-update-button shadow-sm">Автооновлення</button>
+          <button class="update-button shadow-sm js-update-button">
+            <img src="./images/light-refresh.png" alt="refresh image" class="update-button-image">
+            <span>Оновити</span>
+          </button>
+          <button class="auto-update-button shadow-sm js-auto-update-button">
+            <img src="./images/light-auto-refresh.png" alt="auto reload image" class="auto-update-button-image">
+            <span>Автооновлення</span>
+          </button>
+        </div>
+
+        <div class="controls-right-side">
+          <img src="./images/grey-moon-icon.png" alt="moon icon" class="moon-icon-image">
+          <div clas="checkbox-container">
+            <input type="checkbox" class="theme-checkbox">
+            <div class="checkbox-circle"></div>
+          </div>
         </div>
       </div>
+
+      <div class="small-container clock-container">
+        <img src="./images/clock-sun-image.png" alt="sun image" class="js-time-image">
+        <div class="clock"></div>
+      </div>
+
+
       <div class="parameters">
-        <div class="light-container parameters-container">
+        <div class="small-container parameters-container">
           <h3>Сонячна радіація</h3>
 
           <div class="parameters-info">
             <div>
-              <span class="parameters-value">475</span>  
+              <span class="parameters-value js-parameters-value">475</span>  
               <span class="parameters-units">Вт/м2</span>
             </div>
             <div class="parameters-visual-status"></div>
           </div>
 
         </div>
-        <div class="light-container parameters-container">
+        <div class="small-container parameters-container">
           <h3>Вироблена потужність</h3>
     
 
           <div class="parameters-info">
             <div>
-              <span class="parameters-value">475</span>  
+              <span class="parameters-value js-parameters-value">475</span>  
               <span class="parameters-units">кВт</span>
             </div>
             <div class="parameters-visual-status"></div>
           </div>
 
         </div>
-        <div class="light-container parameters-container">
+        <div class="small-container parameters-container">
           <h3>Напруга DC</h3>
 
           <div class="parameters-info">
             <div>
-              <span class="parameters-value">475</span>  
+              <span class="parameters-value js-parameters-value">475</span>  
               <span class="parameters-units">В</span>
             </div>
             <div class="parameters-visual-status"></div>
           </div>
 
         </div>
-        <div class="light-container parameters-container">
+        <div class="small-container parameters-container">
           <h3>Температура панелей</h3>
           
           <div class="parameters-info">
             <div>
-              <span class="parameters-value">475</span>  
+              <span class="parameters-value js-parameters-value">475</span>  
               <span class="parameters-units">°C</span>
             </div>
             <div class="parameters-visual-status"></div>
           </div>
 
         </div>
-        <div class="light-container parameters-container">
+        <div class="small-container parameters-container">
           <h3>Ефективність</h3>
           <div class="parameters-info">
             <div>
-              <span class="parameters-value">475</span>  
+              <span class="parameters-value js-parameters-value">475</span>  
               <span class="parameters-units">%</span>
             </div>
             <div class="parameters-visual-status"></div>
           </div>
         </div>
+
+        <div class="small-container parameters-container">
+          <h3>Вироблено за сьогодні</h3>
+          <div class="parameters-info">
+            <div>
+              <span class="parameters-value">475</span>  
+              <span class="parameters-units">кВт/год</span>
+            </div>
+          </div>
+        </div>
+
+
       </div>
+
+
     </main>
   </div>
 
@@ -98,6 +144,6 @@
 
 
 
-  <script src="./scripts/script.js"></script>
+  <script type="module" src="./scripts/script.js"></script>
 </body>
 </html>

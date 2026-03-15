@@ -2,11 +2,40 @@
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
+:root {
+  --bg-gradient: linear-gradient(140deg,rgba(255, 175, 77, 1) 0%, rgba(255, 66, 66, 1) 100%);
+  --container-color: white;
+  --font-color: black;
+  --update-button-bg: hsl(31, 100%, 53%);
+  --update-button-bg-hover: hsl(31, 100%, 45%);
+  --auto-update-button-bg: hsl(6, 100%, 58%);
+  --auto-update-button-bg-hover: hsl(6, 100%, 45%);
+  --auto-update-button-pressed-bg: hsl(117, 66%, 38%);
+  --auto-update-button-pressed-bg-hover: hsl(117, 66%, 30%);
+  --checkbox-bg: rgb(255, 166, 34);
+  --checkbox-slider-bg: red;
+
+
+}
+
+.dark-theme {
+  --bg-gradient: linear-gradient(140deg,rgba(120, 120, 120, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  --container-color: rgb(150, 150, 150);
+  --font-color: white;
+  --update-button-bg: hsl(0, 0%, 43%);
+  --update-button-bg-hover: hsl(0, 0%, 39%);
+  --auto-update-button-bg: hsl(271, 61%, 49%);
+  --auto-update-button-bg-hover: hsl(271, 61%, 44%);
+  --auto-update-button-pressed-bg: hsl(278, 62%, 58%);
+  --auto-update-button-pressed-bg-hover: hsl(278, 62%, 50%);
+  --checkbox-bg: rgb(166, 107, 186);
+  --checkbox-slider-bg: purple;
+}
 
 body {
   min-height: 100vh;
   padding: 20px 20px;
-  background: linear-gradient(140deg,rgba(255, 175, 77, 1) 0%, rgba(255, 66, 66, 1) 100%);
+  background: var(--bg-gradient);
 }
 
 .container {
@@ -14,19 +43,35 @@ body {
   margin: 0 auto;
 }
 
-.light-container {
-  background-color: white;
+.small-container {
+  background-color: var(--container-color);
+  color: var(--font-color);
   text-align: center;
   padding: 20px 0;
   border-radius: 20px;
 }
 
+/* header */
+header h1 {
+  margin-bottom: 16px;
+}
 
+/* controls */
 
 .controls {
   display: flex;
-  margin-top: 20px;
-  padding: 15px 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px 20px;
+  
+}
+
+.controls-left-side,
+.controls-right-side {
+  display: flex;
+  align-items: center;
 }
 
 .update-button,
@@ -35,26 +80,72 @@ body {
   font-size: 1.25rem;
   padding: 10px 20px;
   color: white;
-  border-radius: 10px;
+  border-radius: 30px;
   cursor: pointer;
+  display: flex;
 }
 
 .update-button {
-  background-color: hsl(31, 100%, 53%);
+  background-color: var(--update-button-bg);
   margin-right: 5px;
 }
 
-.auto-update-button {
-  background-color: hsl(6, 100%, 58%);
-
+.update-button:hover {
+  background-color: var(--update-button-bg-hover);
 }
 
+.update-button-image,
+.auto-update-button-image {
+  margin-right: 10px;
+}
+
+.auto-update-button {
+  background-color: var(--auto-update-button-bg);
+}
+
+.auto-update-button:hover {
+  background-color: var(--auto-update-button-bg-hover);
+}
+
+.auto-update-button-pressed {
+  background-color: var(--auto-update-button-pressed-bg);
+}
+
+.auto-update-button-pressed:hover {
+  background-color: var(--auto-update-button-pressed-bg-hover);
+}
+
+.moon-icon-image {
+  margin-bottom: 10px;
+}
+
+/* clock */
+.clock-container {
+  padding-top: 10px;
+  padding-bottom: 18px
+}
+
+.clock {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+
+/* parameters */
 
 .parameters {
   margin-top: 10px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 10px;
+}
+
+.parameters .light-container {
+  transition: transform .2s;
+}
+
+.parameters .small-container:hover {
+  transform: translateY(-3px);
 }
 
 .parameters-container {
