@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    zoom: 0.75;
+    font-family: Arial;
+}
+
+header {
+    color: white;
+    background-color: rgb(133, 100, 67);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+input {
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+    font-family: Arial;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-container {
+    background-color: blanchedalmond;
+    min-height: 1100px;
+    width: 1250px;
+    margin: 50px auto;
+
+    display: grid;
+    grid-template-rows: 100px 1fr;
+}
+
+/* main */
+
+.main-container {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* left side */
+
+.register-forms-container,
+.substations-list-container {
+    display: grid;
+    grid-template-rows: 50px auto;
+    margin: 0 25px;
+    height: 95%;
+}
+
+.name-form,
+.type-form,
+.address-form,
+.power-and-voltage-form,
+.quantity-and-date-form,
+.state-form {
+    margin-bottom: 22px;
+}
+
+.forms-container {
+    font-size: 22px;
+}
+
+input, select, textarea {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 10px;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    transition: box-shadow 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+    box-shadow: 0 0 0 2px rgb(133, 100, 67);
+}
+
+.power-and-voltage-form {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 15px;
+}
+
+.quantity-and-date-form {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 15px;
+}
+
+.register-form-buttons {
+    margin-top: 50px;
+}
+
+.register-button,
+.clear-button {
+    font-size: 1.5rem;
+    padding: 14px 14px;
+    border: none;
+    color: white;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.15s;
+}
+
+.register-button {
+    background-color: rgb(100, 52, 10);
+}
+
+.register-button:hover {
+    background-color: rgb(75, 38, 5);
+    transform: translateY(-2px);
+}
+
+.register-button:active {
+    transform: translateY(0);
+}
+
+.clear-button {
+    background-color: rgb(150, 96, 58);
+}
+
+.clear-button:hover {
+    background-color: rgb(120, 72, 38);
+    transform: translateY(-2px);
+}
+
+.clear-button:active {
+    transform: translateY(0);
+}
+
+/* right side */
+
+.substations-list-container {
+    grid-template-rows: 50px 50px 1fr;
+}
+
+.filter-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 10px 0 6px;
+    font-size: 18px;
+}
+
+.filter-container select {
+    margin-top: 0;
+    width: auto;
+    font-size: 1.2rem;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.substations-list {
+    background-color: rgb(97, 76, 62);
+    min-height: 200px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow-y: auto;
+    max-height: 900px;
+}
+
+.empty-message {
+    color: rgb(220, 200, 180);
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* substation cards */
+
+.substation-card {
+    background-color: blanchedalmond;
+    padding: 12px 14px;
+    font-size: 15px;
+}
+
+.card-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgb(133, 100, 67);
+}
+
+.card-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(60, 35, 10);
+}
+
+.card-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+.card-table tr td {
+    padding: 3px 6px;
+    vertical-align: top;
+}
+
+.card-table tr td:first-child {
+    width: 140px;
+    color: rgb(80, 50, 20);
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.card-table tr:nth-child(even) {
+    background-color: rgba(133, 100, 67, 0.1);
+}
+
+.age-text {
+    color: rgb(120, 90, 60);
+    font-size: 14px;
+}
+
+/* state badges */
+
+.state-badge {
+    font-size: 13px;
+    padding: 3px 8px;
+    color: white;
+    white-space: nowrap;
+}
+
+.state-ok { background-color: rgb(60, 130, 60); }
+.state-repair { background-color: rgb(180, 130, 20); }
+.state-emergency { background-color: rgb(180, 40, 40); }
+.state-maintenance { background-color: rgb(60, 100, 170); }
+
+.delete-button {
+    margin-top: 8px;
+    font-size: 14px;
+    padding: 6px 14px;
+    border: none;
+    background-color: rgb(150, 50, 30);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.15s;
+}
+
+.delete-button:hover {
+    background-color: rgb(110, 30, 15);
+    transform: translateY(-1px);
+}
+
+.delete-button:active {
+    transform: translateY(0);
+}
+
+/* message */
+
+.message {
+    margin-top: 16px;
+    padding: 12px;
+    font-size: 16px;
+    display: none;
+}
+
+.message.success {
+    display: block;
+    background-color: rgb(200, 230, 200);
+    color: rgb(30, 90, 30);
+    border-left: 4px solid rgb(60, 150, 60);
+}
+
+.message.error {
+    display: block;
+    background-color: rgb(240, 210, 210);
+    color: rgb(120, 20, 20);
+    border-left: 4px solid rgb(180, 40, 40);
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація підстанцій</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="content-container">
+        <header>
+            <h1>Реєстрація підстанцій</h1>
+        </header>
+
+        <main class="main-container">
+            <section class="left-section">
+                <div class="register-forms-container">
+                    <h2>Реєстрація нової підстанції</h2>
+
+                    <form class="forms-container js-substation-form">
+                        <div class="name-form">
+                            <label for="name">Найменування підстанції</label>
+                            <input class="js-name-input" type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="type-form">
+                            <label for="type">Тип підстанції</label>
+                            <select class="js-type-option" name="type" id="type" required>
+                                <option value="" selected disabled hidden>Оберіть тип</option>
+                                <option value="Комплектна КТП">Комплектна КТП</option>
+                                <option value="Щоглова ЩТП">Щоглова ЩТП</option>
+                            </select>
+                        </div>
+
+                        <div class="address-form">
+                            <label for="address">Адреса</label>
+                            <textarea class="js-address-input" id="address" name="address" rows="4" required></textarea>
+                        </div>
+
+                        <div class="power-and-voltage-form">
+                            <div class="power-form">
+                                <label for="power">Потужність (МВА)</label>
+                                <input class="js-power-input" type="number" name="power" min="0" step="0.01" id="power" required>
+                            </div>
+                            <div class="voltage-form">
+                                <label for="voltage">Клас напруги</label>
+                                <select class="js-voltage-option" name="voltage" id="voltage" required>
+                                    <option value="" selected disabled hidden>Оберіть напругу</option>
+                                    <option value="Низька напруга">Низька напруга</option>
+                                    <option value="Середня напруга">Середня напруга</option>
+                                    <option value="Висока напруга">Висока напруга</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="quantity-and-date-form">
+                            <div class="transformators-quantity">
+                                <label for="quantity">Кількість трансформаторів</label>
+                                <input class="js-quantity-input" type="number" name="quantity" min="1" required>
+                            </div>
+                      
+                            <div class="commision-year">
+                                <label for="date">Рік введення</label>
+                                <input class="js-date-input" type="number" name="date" id="date" min="1950" max="2025">
+                            </div>
+                        </div>
+
+                        <div class="state-form">
+                            <label for="state">Стан</label>
+                            <select class="js-state-option" name="state" id="state" required>
+                                <option value="" selected disabled hidden>Оберіть стан</option>
+                                <option value="Робочий">Робочий</option>
+                                <option value="Потребує ремонту">Потребує ремонту</option>
+                                <option value="Аварійний">Аварійний</option>
+                                <option value="На технічному обслуговуванні">На технічному обслуговуванні</option>
+                            </select>
+                        </div>
+
+                        <div class="register-form-buttons"> 
+                            <button type="submit" class="register-button js-register-button">Зареєструвати</button>
+                            <button type="button" class="clear-button js-clear-button">Очистити</button>
+                        </div>
+
+                        <div id="message" class="message"></div>
+                    </form>
+                </div>
+            </section>
+
+            <section>
+                <div class="substations-list-container">
+                    <h2>Зареєстровані підстанції</h2>
+
+                    <div class="filter-container">
+                        <label for="filterState">Фільтр за станом:</label>
+                        <select id="filterState" class="js-filter-state">
+                            <option value="">Усі</option>
+                            <option value="Робочий">Робочий</option>
+                            <option value="Потребує ремонту">Потребує ремонту</option>
+                            <option value="Аварійний">Аварійний</option>
+                            <option value="На технічному обслуговуванні">На технічному обслуговуванні</option>
+                        </select>
+                    </div>
+
+                    <div class="substations-list js-substations-list"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body> 
+</html>
